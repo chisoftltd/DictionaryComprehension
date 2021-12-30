@@ -10,5 +10,5 @@ print(f"Names: {names}")
 student_score = {student: random.randint(0, 100) for student in names}  # student score
 print(f"Student Score: {student_score}")
 
-passed_student = {student: score for (student, score) in student_score.items() if score > 40}  # passed students
+passed_student = {student: score for (student, score) in student_score.items() if score > 60}  # passed students
 print(f"Passed Students: {passed_student}")
