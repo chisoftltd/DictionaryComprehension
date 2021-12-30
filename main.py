@@ -53,3 +53,28 @@ print(weather_c)
 weather_f = {day: (temp_c * 9 / 5) + 32 for (day, temp_c) in weather_c.items()}
 
 print(weather_f)
+
+print(student_score)
+student_key = [key for (key, value) in student_score.items()]
+student_value = [value for (key, value) in student_score.items()]
+students_record = {
+    'student': student_key,
+    'score': student_value
+}
+
+import pandas
+
+print(students_record)
+student_score_frame = pandas.DataFrame(students_record)
+print(student_score_frame)
+
+for (key, value) in student_score_frame.items():
+    print(value)
+
+for (index, row) in student_score_frame.iterrows():
+    print(row)
+    print(row.student)
+    print(row.score)
+    if row.student == "Jenny":
+        print(row.score)
+
